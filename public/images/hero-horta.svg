@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="t d">
+  <title id="t">Horta em uma janela</title>
+  <desc id="d">Vasos com temperos e folhosas em um parapeito ensolarado, ao lado de um regador.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe6dc"/>
+      <stop offset="1" stop-color="#f4efe3"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff3c4" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#fff3c4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="520" fill="#e8dfca"/>
+  <!-- janela -->
+  <rect x="70" y="40" width="500" height="330" rx="18" fill="#fbf8f1"/>
+  <rect x="88" y="58" width="464" height="294" rx="10" fill="url(#sky)"/>
+  <rect x="316" y="58" width="8" height="294" fill="#fbf8f1"/>
+  <rect x="88" y="196" width="464" height="8" fill="#fbf8f1"/>
+  <!-- sol e colinas -->
+  <circle cx="470" cy="118" r="34" fill="#f6d673"/>
+  <g stroke="#f6d673" stroke-width="5" stroke-linecap="round" opacity=".8">
+    <path d="M470 66v-12M470 182v12M418 118h-12M534 118h12M433 81l-8-8M507 155l8 8M433 155l-8 8M507 81l8-8"/>
+  </g>
+  <path d="M88 300c60-46 120-52 190-28s120 22 190-14l84 24v70H88Z" fill="#a0c78f"/>
+  <path d="M88 330c70-30 140-30 220-6s160 6 244-14v42H88Z" fill="#74a966"/>
+  <!-- feixe de luz -->
+  <path d="M410 150 190 420h260l130-270Z" fill="url(#beam)"/>
+
+  <!-- parapeito -->
+  <rect x="40" y="368" width="560" height="26" rx="8" fill="#c9a27a"/>
+  <rect x="40" y="388" width="560" height="8" fill="#a98660"/>
+  <rect x="60" y="396" width="520" height="124" fill="#e8dfca"/>
+
+  <!-- vaso 1: alface -->
+  <g>
+    <path d="M110 300h96l-12 68h-72Z" fill="#b9633f"/>
+    <rect x="104" y="292" width="108" height="16" rx="6" fill="#c97852"/>
+    <g fill="#4f8a48">
+      <ellipse cx="132" cy="276" rx="24" ry="18" transform="rotate(-25 132 276)"/>
+      <ellipse cx="184" cy="276" rx="24" ry="18" transform="rotate(25 184 276)"/>
+      <ellipse cx="158" cy="262" rx="26" ry="22"/>
+    </g>
+    <g fill="#74a966">
+      <ellipse cx="146" cy="270" rx="18" ry="14" transform="rotate(-15 146 270)"/>
+      <ellipse cx="172" cy="270" rx="18" ry="14" transform="rotate(15 172 270)"/>
+      <ellipse cx="158" cy="256" rx="18" ry="15"/>
+    </g>
+  </g>
+
+  <!-- vaso 2: cebolinha -->
+  <g>
+    <path d="M238 310h84l-10 58h-64Z" fill="#b9633f"/>
+    <rect x="232" y="302" width="96" height="16" rx="6" fill="#c97852"/>
+    <g stroke="#3b7039" stroke-width="5" stroke-linecap="round" fill="none">
+      <path d="M254 302c-6-40-14-70-22-92"/>
+      <path d="M266 302c-2-50-4-84-6-110"/>
+      <path d="M280 302c0-55 0-90 2-116"/>
+      <path d="M294 302c4-50 10-80 20-104"/>
+      <path d="M306 302c8-40 18-66 30-84"/>
+    </g>
+  </g>
+
+  <!-- vaso 3: manjericão -->
+  <g>
+    <path d="M358 300h96l-12 68h-72Z" fill="#b9633f"/>
+    <rect x="352" y="292" width="108" height="16" rx="6" fill="#c97852"/>
+    <path d="M406 292v-70" stroke="#2f5a2f" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#4f8a48">
+      <path d="M406 246c-30 0-44-18-46-36 26 0 44 14 46 36Z"/>
+      <path d="M406 246c30 0 44-18 46-36-26 0-44 14-46 36Z"/>
+      <path d="M406 276c-28 2-44-14-48-30 24-2 44 10 48 30Z"/>
+      <path d="M406 276c28 2 44-14 48-30-24-2-44 10-48 30Z"/>
+      <path d="M406 222c-14-4-20-16-20-28 14 4 22 14 20 28Z"/>
+      <path d="M406 222c14-4 20-16 20-28-14 4-22 14-20 28Z"/>
+    </g>
+  </g>
+
+  <!-- regador -->
+  <g>
+    <path d="M498 330h58l-6 38h-46Z" fill="#2b6f86"/>
+    <ellipse cx="527" cy="330" rx="29" ry="6" fill="#225a6d"/>
+    <path d="M498 342c-22-2-34-18-36-34l10-2c2 12 10 22 26 24Z" fill="#2b6f86"/>
+    <rect x="456" y="298" width="22" height="14" rx="3" fill="#225a6d" transform="rotate(-18 456 298)"/>
+    <path d="M556 338c18-4 28-22 20-38" stroke="#2b6f86" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <g fill="#8fc5d6">
+      <circle cx="452" cy="326" r="4"/><circle cx="444" cy="342" r="4"/><circle cx="458" cy="350" r="3.500"/>
+    </g>
+  </g>
+
+  <!-- pequenas folhas decorativas -->
+  <path d="M92 440c20-28 50-34 76-24-10 26-38 40-76 24Z" fill="#a0c78f"/>
+  <path d="M540 450c-18-24-44-30-68-20 8 24 34 36 68 20Z" fill="#c3dcb7"/>
+</svg>

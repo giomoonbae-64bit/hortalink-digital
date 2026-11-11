@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t">
+  <title id="t">Vasos com temperos e folhosas</title>
+  <rect width="640" height="420" fill="#f1f7ee"/>
+  <circle cx="530" cy="80" r="46" fill="#f6d673"/>
+  <!-- mesa/varanda -->
+  <rect x="0" y="330" width="640" height="90" fill="#e8dfca"/>
+  <rect x="0" y="322" width="640" height="14" fill="#c9a27a"/>
+
+  <!-- vaso grande com tomateiro pequeno -->
+  <path d="M90 250h120l-16 78h-88Z" fill="#b9633f"/>
+  <rect x="82" y="238" width="136" height="18" rx="7" fill="#c97852"/>
+  <path d="M150 238c0-50-4-90-4-120" stroke="#2f5a2f" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <g fill="#4f8a48">
+    <ellipse cx="116" cy="170" rx="26" ry="12" transform="rotate(-30 116 170)"/>
+    <ellipse cx="180" cy="150" rx="26" ry="12" transform="rotate(30 180 150)"/>
+    <ellipse cx="120" cy="120" rx="24" ry="11" transform="rotate(-20 120 120)"/>
+    <ellipse cx="176" cy="196" rx="26" ry="12" transform="rotate(25 176 196)"/>
+  </g>
+  <circle cx="132" cy="212" r="12" fill="#c8492f"/>
+  <circle cx="168" cy="224" r="10" fill="#d9573a"/>
+
+  <!-- garrafa PET horizontal com folhosas -->
+  <g transform="translate(250 230)">
+    <rect x="0" y="40" width="190" height="70" rx="30" fill="#dbeff5" opacity=".85" stroke="#8fc5d6" stroke-width="3"/>
+    <rect x="-14" y="62" width="18" height="26" rx="4" fill="#2b6f86"/>
+    <path d="M10 70h170v34c0 4-4 6-8 6H18c-4 0-8-2-8-6Z" fill="#7a5a3c"/>
+    <g fill="#4f8a48">
+      <ellipse cx="46" cy="52" rx="22" ry="16" transform="rotate(-20 46 52)"/>
+      <ellipse cx="96" cy="46" rx="24" ry="18"/>
+      <ellipse cx="148" cy="52" rx="22" ry="16" transform="rotate(20 148 52)"/>
+    </g>
+    <g fill="#74a966">
+      <ellipse cx="46" cy="52" rx="13" ry="9" transform="rotate(-20 46 52)"/>
+      <ellipse cx="96" cy="46" rx="15" ry="11"/>
+      <ellipse cx="148" cy="52" rx="13" ry="9" transform="rotate(20 148 52)"/>
+    </g>
+  </g>
+  <!-- ganchos -->
+  <path d="M290 230v-60M420 230v-60" stroke="#a98660" stroke-width="4"/>
+  <rect x="280" y="164" width="150" height="8" rx="4" fill="#a98660"/>
+
+  <!-- vaso pequeno -->
+  <path d="M480 280h80l-10 48h-60Z" fill="#b9633f"/>
+  <rect x="474" y="270" width="92" height="14" rx="6" fill="#c97852"/>
+  <g stroke="#3b7039" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M498 270c-6-30-10-50-18-66"/><path d="M514 270c-2-38-2-62 0-84"/>
+    <path d="M530 270c2-36 6-56 14-74"/><path d="M546 270c6-28 14-44 26-58"/>
+  </g>
+</svg>

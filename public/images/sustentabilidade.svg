@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t">
+  <title id="t">Reutilização e compostagem</title>
+  <rect width="640" height="420" fill="#f4efe3"/>
+  <rect x="0" y="336" width="640" height="84" fill="#e0eed9"/>
+
+  <!-- composteira: três caixas empilhadas -->
+  <g>
+    <rect x="70" y="120" width="170" height="70" rx="10" fill="#4f8a48"/>
+    <rect x="70" y="196" width="170" height="70" rx="10" fill="#3b7039"/>
+    <rect x="70" y="272" width="170" height="64" rx="10" fill="#2f5a2f"/>
+    <rect x="62" y="108" width="186" height="16" rx="8" fill="#274827"/>
+    <g fill="#a0c78f" opacity=".9">
+      <circle cx="100" cy="156" r="5"/><circle cx="130" cy="156" r="5"/><circle cx="160" cy="156" r="5"/><circle cx="190" cy="156" r="5"/><circle cx="220" cy="156" r="5"/>
+      <circle cx="100" cy="232" r="5"/><circle cx="130" cy="232" r="5"/><circle cx="160" cy="232" r="5"/><circle cx="190" cy="232" r="5"/><circle cx="220" cy="232" r="5"/>
+    </g>
+    <path d="M240 318h26" stroke="#7a5a3c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M266 318v14" stroke="#7a5a3c" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- cascas -->
+  <g>
+    <path d="M110 70c14-22 40-26 56-12-6 20-30 32-56 12Z" fill="#e8b23a"/>
+    <path d="M190 60c10-18 34-22 48-10-6 18-26 28-48 10Z" fill="#c8492f"/>
+    <path d="M150 90c8-12 24-14 32-6-4 12-18 18-32 6Z" fill="#74a966"/>
+  </g>
+  <!-- seta -->
+  <path d="M290 200h80" stroke="#b9633f" stroke-width="8" stroke-linecap="round"/>
+  <path d="m352 180 24 20-24 20" stroke="#b9633f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- garrafa PET vaso -->
+  <g transform="translate(400 150)">
+    <path d="M30 0h40v22c0 8 10 14 10 30v110c0 10-8 18-18 18H38c-10 0-18-8-18-18V52c0-16 10-22 10-30Z" fill="#dbeff5" stroke="#8fc5d6" stroke-width="3" opacity=".9"/>
+    <rect x="34" y="-10" width="32" height="12" rx="3" fill="#2b6f86"/>
+    <path d="M24 98h52v64c0 6-4 10-10 10H34c-6 0-10-4-10-10Z" fill="#7a5a3c"/>
+    <path d="M50 98V70" stroke="#2f5a2f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M50 78c-14 0-24-8-26-20 14 0 24 8 26 20Z" fill="#4f8a48"/>
+    <path d="M50 70c14 0 24-8 26-20-14 0-24 8-26 20Z" fill="#74a966"/>
+  </g>
+
+  <!-- sacola de tecido -->
+  <g transform="translate(520 210)">
+    <path d="M10 40h86l8 120H2Z" fill="#d6c8a8"/>
+    <path d="M32 40c0-30 12-40 21-40s21 10 21 40" stroke="#b9a37a" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M52 92c-14-14-8-30 0-30s14 16 0 30Z" fill="#4f8a48" transform="translate(0 6)"/>
+    <path d="M38 118c10-8 24-6 30 4" stroke="#4f8a48" stroke-width="5" fill="none" stroke-linecap="round" transform="translate(0 6)"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t">
+  <title id="t">Rega consciente e água da chuva</title>
+  <rect width="640" height="420" fill="#eef6f8"/>
+  <rect x="0" y="330" width="640" height="90" fill="#e8dfca"/>
+  <rect x="0" y="322" width="640" height="14" fill="#7a5a3c"/>
+
+  <!-- nuvem e chuva -->
+  <g fill="#cfdde3">
+    <ellipse cx="130" cy="70" rx="56" ry="28"/><ellipse cx="180" cy="60" rx="44" ry="30"/><ellipse cx="95" cy="82" rx="38" ry="22"/>
+  </g>
+  <g stroke="#2b6f86" stroke-width="5" stroke-linecap="round" opacity=".75">
+    <path d="M110 118l-8 20M140 124l-8 20M170 118l-8 20M200 124l-8 20"/>
+  </g>
+
+  <!-- balde com água da chuva -->
+  <g>
+    <path d="M80 220h112l-14 108h-84Z" fill="#9aa9b0"/>
+    <ellipse cx="136" cy="220" rx="56" ry="10" fill="#7f8f97"/>
+    <ellipse cx="136" cy="226" rx="46" ry="7" fill="#5aa6bd"/>
+    <path d="M90 214c-10-30 8-50 8-50" stroke="#7f8f97" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M182 214c10-30-8-50-8-50" stroke="#7f8f97" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- regador -->
+  <g transform="translate(250 190)">
+    <path d="M30 40h110l-10 90H40Z" fill="#2b6f86"/>
+    <ellipse cx="85" cy="40" rx="55" ry="9" fill="#225a6d"/>
+    <path d="M30 70C0 66-14 40-16 14l20-4c2 18 10 34 28 40Z" fill="#2b6f86"/>
+    <rect x="-34" y="-2" width="34" height="18" rx="4" fill="#225a6d" transform="rotate(-16 -34 -2)"/>
+    <path d="M140 58c34-4 44-34 30-60" stroke="#2b6f86" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <g fill="#5aa6bd">
+      <circle cx="-44" cy="30" r="5"/><circle cx="-58" cy="52" r="5"/><circle cx="-38" cy="62" r="4"/><circle cx="-62" cy="78" r="4"/>
+    </g>
+  </g>
+
+  <!-- planta recebendo água -->
+  <g>
+    <path d="M360 266h90l-12 62h-66Z" fill="#b9633f"/>
+    <rect x="354" y="256" width="102" height="16" rx="6" fill="#c97852"/>
+    <path d="M405 256v-80" stroke="#2f5a2f" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#4f8a48">
+      <path d="M405 214c-34 2-50-16-52-34 28-2 48 12 52 34Z"/>
+      <path d="M405 190c34 2 50-16 52-34-28-2-48 12-52 34Z"/>
+    </g>
+    <path d="M405 176c-18-4-26-18-24-34 18 4 26 16 24 34Z" fill="#74a966"/>
+  </g>
+
+  <!-- gotas -->
+  <path d="M540 120s26 30 26 50a26 26 0 0 1-52 0c0-20 26-50 26-50Z" fill="#5aa6bd"/>
+  <path d="M530 170a12 12 0 0 0 10 10" stroke="#eef6f8" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M590 230s14 16 14 27a14 14 0 0 1-28 0c0-11 14-27 14-27Z" fill="#8fc5d6"/>
+</svg>

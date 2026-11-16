@@ -45,7 +45,7 @@ export default function Contact() {
                 {contact.whatsappLabel}
                 <span className="sr-only"> (abre em nova aba)</span>
               </span>
-              <span className="mt-1 block text-[0.95rem] text-leaf-800/85">Mensagens de texto. Não atendemos ligações.</span>
+              <span className="mt-1 block text-[0.95rem] text-leaf-800/85">Para dúvidas e solicitações por mensagem.</span>
             </span>
           </a>
         </div>

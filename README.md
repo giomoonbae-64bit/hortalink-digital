@@ -59,7 +59,7 @@ Enquanto `DATABASE_URL` não estiver cadastrada, a API responde com erro e o sit
 A avaliação é **anônima**: não existe campo de nome, e-mail, telefone, CPF ou endereço, e a API não grava IP nem
 qualquer outro identificador. O aviso de privacidade está em `src/sections/Participe.tsx`. Antes de divulgar:
 
-- troque os contatos fictícios (veja a seção 4);
+- troque o e-mail fictício pelo real (veja a seção 4);
 - confirme com a coordenação/orientação da extensão se a atividade exige alguma autorização institucional
   ou termo de consentimento específico.
 
@@ -78,8 +78,8 @@ qualquer outro identificador. O aviso de privacidade está em `src/sections/Part
 Tudo fica em **`src/data/project.ts`**: instituição (UNIFRAN), equipe, responsável pela mentoria e canais de
 contato. Os textos do site (Sobre, Contato, rodapé e aviso de privacidade) leem esse arquivo.
 
-> O **e-mail e o WhatsApp atuais são fictícios** (`contato.hortalink@exemplo.com.br` e `(16) 99999-0000`), e o nome
-> do(a) mentor(a) é um marcador. Troque pelos dados reais antes de divulgar.
+> O **e-mail atual é fictício** (`contato.hortalink@exemplo.com.br`). Troque pelo e-mail real da equipe antes de
+> divulgar. O WhatsApp e o nome do(a) mentor(a) já são os dados reais.
 
 ---
 

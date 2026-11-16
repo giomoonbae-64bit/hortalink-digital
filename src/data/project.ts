@@ -2,8 +2,7 @@
  * Identificação do projeto e canais de contato.
  * Edite SOMENTE este arquivo para trocar nomes e contatos em todo o site.
  *
- * ATENÇÃO: o e-mail abaixo ainda é FICTÍCIO (exemplo).
- * Troque pelo e-mail real da equipe antes de divulgar o site.
+ * Para trocar o e-mail, o WhatsApp ou os nomes, altere os valores abaixo e publique de novo.
  */
 export const project = {
   name: "HortaLink Digital",
@@ -20,11 +19,11 @@ export const project = {
   },
   mentor: {
     role: "Responsável pela mentoria",
-    name: "Renato Pereira Orenha",
+    name: "Prof. Renato Pereira Orenha",
     description: "Orienta o projeto e acompanha as atividades de extensão.",
   },
   contact: {
-    email: "contato.hortalink@exemplo.com.br",
+    email: "gabrielcaastrobri@gmail.com",
     whatsappLabel: "(16) 98220-2029",
     whatsappLink: "https://wa.me/5516982202029",
     hours: "Segunda a sexta, das 9h às 17h",

@@ -11,7 +11,6 @@ export type WouldRecommend = "sim" | "talvez" | "nao";
 
 /** Estado do formulário (valores vazios "" enquanto a pessoa não responde). */
 export interface SurveyFormState {
-  name: string;
   hadGarden: HadGarden | "";
   learnedNew: LearnedNew | "";
   mostInteresting: MostInteresting | "";
@@ -27,7 +26,6 @@ export interface SurveyFormState {
 
 /** Dados efetivamente enviados ao armazenamento (já validados). */
 export interface SurveyPayload {
-  name: string | null;
   had_garden: HadGarden;
   learned_new: LearnedNew;
   most_interesting: MostInteresting;

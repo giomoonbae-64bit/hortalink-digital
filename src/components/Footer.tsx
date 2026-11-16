@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import { navItems } from "../data/navigation";
+import { project } from "../data/project";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +10,12 @@ export default function Footer() {
         <div>
           <Logo light />
           <p className="mt-4 max-w-xs text-sm text-leaf-200">
-            Iniciativa de educação ambiental desenvolvida por estudantes universitários.
+            Iniciativa de educação ambiental desenvolvida por estudantes da {project.institution.short}.
+          </p>
+          <p className="mt-3 text-sm text-leaf-200">
+            {project.team.name}
+            <br />
+            {project.mentor.role}: {project.mentor.name}
           </p>
         </div>
 
@@ -39,14 +45,20 @@ export default function Footer() {
         <div>
           <h2 className="font-sans text-sm font-semibold uppercase tracking-wider text-leaf-300">O projeto</h2>
           <p className="mt-3 text-sm text-leaf-200">
-            Projeto de extensão universitária desenvolvido no DreamShaper, voltado à educação ambiental e a práticas
-            sustentáveis nas residências.
+            Projeto de extensão da {project.institution.name} ({project.institution.short}), desenvolvido no
+            DreamShaper, voltado à educação ambiental e a práticas sustentáveis nas residências.
+          </p>
+          <p className="mt-3 text-sm text-leaf-200">
+            Contato:{" "}
+            <a href={`mailto:${project.contact.email}`} className="underline hover:text-white">
+              {project.contact.email}
+            </a>
           </p>
         </div>
       </div>
       <div className="border-t border-leaf-800">
         <p className="container-page py-5 text-xs text-leaf-300">
-          © {year} HortaLink Digital. Conteúdo educativo, sem fins lucrativos.
+          © {year} HortaLink Digital · {project.institution.short}. Conteúdo educativo, sem fins lucrativos.
         </p>
       </div>
     </footer>

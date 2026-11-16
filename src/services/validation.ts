@@ -1,6 +1,5 @@
 import type { FormErrors, SurveyFormState, SurveyPayload } from "../types/survey";
 
-export const MAX_NAME = 80;
 export const MAX_COMMENTS = 1000;
 
 const REQUIRED_MESSAGE = "Selecione uma opção para continuar.";
@@ -9,9 +8,6 @@ const REQUIRED_MESSAGE = "Selecione uma opção para continuar.";
 export function validateSurvey(form: SurveyFormState): FormErrors {
   const errors: FormErrors = {};
 
-  if (form.name.length > MAX_NAME) {
-    errors.name = `O nome deve ter no máximo ${MAX_NAME} caracteres.`;
-  }
   if (!form.hadGarden) errors.hadGarden = REQUIRED_MESSAGE;
   if (!form.learnedNew) errors.learnedNew = REQUIRED_MESSAGE;
   if (!form.mostInteresting) errors.mostInteresting = REQUIRED_MESSAGE;
@@ -31,10 +27,8 @@ export function validateSurvey(form: SurveyFormState): FormErrors {
 
 /** Converte o estado (já validado) no formato enviado ao armazenamento. */
 export function toPayload(form: SurveyFormState): SurveyPayload {
-  const name = form.name.trim();
   const comments = form.comments.trim();
   return {
-    name: name === "" ? null : name,
     had_garden: form.hadGarden as SurveyPayload["had_garden"],
     learned_new: form.learnedNew as SurveyPayload["learned_new"],
     most_interesting: form.mostInteresting as SurveyPayload["most_interesting"],

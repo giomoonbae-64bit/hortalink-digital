@@ -10,4 +10,5 @@ export const navItems: NavItem[] = [
   { label: "Economia de Água", href: "#economia-de-agua" },
   { label: "Preservação", href: "#preservacao-ambiental" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Contato", href: "#contato" },
 ];

@@ -3,8 +3,8 @@ import RadioGroup from "../components/form/RadioGroup";
 import TextField from "../components/form/TextField";
 import { AlertIcon, CheckIcon, LockIcon } from "../components/Icons";
 import { useSurveyForm } from "../hooks/useSurveyForm";
-import { getStorageProvider } from "../services/surveyService";
-import { MAX_COMMENTS, MAX_NAME } from "../services/validation";
+import { MAX_COMMENTS } from "../services/validation";
+import { project } from "../data/project";
 import {
   hadGardenOptions,
   learnedNewOptions,
@@ -17,7 +17,6 @@ import {
 
 export default function Participe() {
   const { form, errors, status, formRef, setField, handleSubmit, reset } = useSurveyForm();
-  const configured = getStorageProvider() !== "none";
   const submitting = status.kind === "submitting";
   const errorCount = Object.keys(errors).length;
 
@@ -28,7 +27,7 @@ export default function Participe() {
           id="participe-title"
           kicker="Sua opinião é importante"
           title="Participe da nossa pesquisa"
-          intro="Depois de conhecer os conteúdos, conte para nós o que você achou. Leva cerca de 3 minutos e ajuda a melhorar este projeto de educação ambiental."
+          intro="Depois de conhecer os conteúdos, conte para nós o que você achou. A avaliação é anônima, leva cerca de 3 minutos e ajuda a melhorar este projeto de educação ambiental."
         />
 
         <div className="mt-10 grid gap-8 lg:grid-cols-3">
@@ -44,8 +43,8 @@ export default function Participe() {
                   HortaLink Digital e melhorar o projeto de extensão universitária.
                 </p>
                 <p>
-                  <strong>Dados coletados:</strong> apenas as respostas do questionário. O nome é opcional. Não pedimos
-                  e-mail, telefone, CPF, endereço ou qualquer outro dado pessoal.
+                  <strong>Dados coletados:</strong> apenas as respostas do questionário. A avaliação é anônima: não
+                  pedimos nome, e-mail, telefone, CPF, endereço ou qualquer outro dado pessoal.
                 </p>
                 <p>
                   <strong>Cuidado ao comentar:</strong> não escreva informações pessoais ou de terceiros no campo de
@@ -57,8 +56,16 @@ export default function Participe() {
                   momento.
                 </p>
                 <p>
-                  Para pedir a exclusão de uma resposta enviada com seu nome, entre em contato com a equipe do projeto
-                  pelo canal divulgado na atividade.
+                  Como as respostas são anônimas, não é possível identificar e apagar uma resposta individual. Dúvidas
+                  ou solicitações sobre a pesquisa: fale com a equipe em{" "}
+                  <a href={`mailto:${project.contact.email}`} className="font-semibold underline">
+                    {project.contact.email}
+                  </a>{" "}
+                  ou veja a seção{" "}
+                  <a href="#contato" className="font-semibold underline">
+                    Contato
+                  </a>
+                  .
                 </p>
               </div>
             </div>
@@ -75,7 +82,7 @@ export default function Participe() {
                 </span>
                 <h3 className="mt-5 text-2xl font-bold sm:text-3xl">Obrigado por participar!</h3>
                 <p className="mx-auto mt-3 max-w-md text-leaf-800/85">
-                  Sua resposta foi enviada. Ela vai nos ajudar a melhorar o HortaLink Digital. Que tal começar com um
+                  Sua resposta anônima foi registrada com sucesso. Ela vai nos ajudar a melhorar o HortaLink Digital. Que tal começar com um
                   vasinho de tempero hoje?
                 </p>
                 <button
@@ -94,39 +101,15 @@ export default function Participe() {
                 aria-label="Questionário de avaliação do HortaLink Digital"
                 className="space-y-8 rounded-2xl border border-sand-200 bg-white p-6 shadow-sm sm:p-8"
               >
-                {!configured && (
-                  <p
-                    role="note"
-                    className="flex items-start gap-2 rounded-xl bg-sand-100 p-4 text-sm text-leaf-900 ring-1 ring-sand-300"
-                  >
-                    <AlertIcon className="mt-0.5 h-5 w-5 shrink-0 text-clay-600" />
-                    <span>
-                      <strong>Aviso para a equipe:</strong> o armazenamento das respostas ainda não foi configurado
-                      (veja o README). Enquanto isso, nenhuma resposta será enviada.
-                    </span>
-                  </p>
-                )}
-
                 {errorCount > 0 && (
                   <p role="alert" className="rounded-xl bg-clay-500/10 p-4 text-sm font-semibold text-clay-600">
                     Faltam {errorCount} {errorCount === 1 ? "item" : "itens"} para enviar. Confira os campos marcados.
                   </p>
                 )}
 
-                <TextField
-                  id="name"
-                  label="1. Seu nome"
-                  hint="Você pode deixar em branco e participar de forma anônima."
-                  maxLength={MAX_NAME}
-                  autoComplete="given-name"
-                  value={form.name}
-                  onChange={(v) => setField("name", v)}
-                  error={errors.name}
-                />
-
                 <RadioGroup
                   name="hadGarden"
-                  legend="2. Você já cultivava plantas ou alimentos em casa antes de conhecer o projeto?"
+                  legend="1. Você já cultivava plantas ou alimentos em casa antes de conhecer o projeto?"
                   options={hadGardenOptions}
                   value={form.hadGarden}
                   onChange={(v) => setField("hadGarden", v as typeof form.hadGarden)}
@@ -135,7 +118,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="learnedNew"
-                  legend="3. Você aprendeu algo novo com os conteúdos apresentados?"
+                  legend="2. Você aprendeu algo novo com os conteúdos apresentados?"
                   options={learnedNewOptions}
                   value={form.learnedNew}
                   onChange={(v) => setField("learnedNew", v as typeof form.learnedNew)}
@@ -144,7 +127,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="mostInteresting"
-                  legend="4. Qual conteúdo foi mais interessante?"
+                  legend="3. Qual conteúdo foi mais interessante?"
                   options={mostInterestingOptions}
                   value={form.mostInteresting}
                   onChange={(v) => setField("mostInteresting", v as typeof form.mostInteresting)}
@@ -153,7 +136,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="willApply"
-                  legend="5. Você pretende aplicar alguma das práticas apresentadas?"
+                  legend="4. Você pretende aplicar alguma das práticas apresentadas?"
                   options={willApplyOptions}
                   value={form.willApply}
                   onChange={(v) => setField("willApply", v as typeof form.willApply)}
@@ -162,7 +145,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="feelsPrepared"
-                  legend="6. Depois de conhecer o projeto, você se sente mais preparado(a) para iniciar uma pequena horta?"
+                  legend="5. Depois de conhecer o projeto, você se sente mais preparado(a) para iniciar uma pequena horta?"
                   options={preparedScale}
                   value={form.feelsPrepared}
                   onChange={(v) => setField("feelsPrepared", v as typeof form.feelsPrepared)}
@@ -172,7 +155,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="infoQuality"
-                  legend="7. Como você avalia a qualidade das informações?"
+                  legend="6. Como você avalia a qualidade das informações?"
                   options={qualityScale}
                   value={form.infoQuality}
                   onChange={(v) => setField("infoQuality", v as typeof form.infoQuality)}
@@ -182,7 +165,7 @@ export default function Participe() {
 
                 <RadioGroup
                   name="wouldRecommend"
-                  legend="8. Você recomendaria o conteúdo para outras pessoas?"
+                  legend="7. Você recomendaria o conteúdo para outras pessoas?"
                   options={wouldRecommendOptions}
                   value={form.wouldRecommend}
                   onChange={(v) => setField("wouldRecommend", v as typeof form.wouldRecommend)}
@@ -191,7 +174,7 @@ export default function Participe() {
 
                 <TextField
                   id="comments"
-                  label="9. Sugestões, comentários ou críticas"
+                  label="8. Sugestões, comentários ou críticas"
                   hint="Não inclua dados pessoais seus ou de outras pessoas."
                   multiline
                   rows={5}

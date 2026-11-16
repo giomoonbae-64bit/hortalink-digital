@@ -107,6 +107,28 @@ export const LockIcon = (p: IconProps) => (
   </Base>
 );
 
+export const MailIcon = (p: IconProps) => (
+  <Base {...p}>
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+    <path d="m3.500 7 8.500 6 8.500-6" />
+  </Base>
+);
+
+export const ChatIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="M4 5.500A1.500 1.500 0 0 1 5.500 4h13A1.500 1.500 0 0 1 20 5.500v9a1.500 1.500 0 0 1-1.500 1.500H10l-4.500 4v-4h0A1.500 1.500 0 0 1 4 14.500v-9Z" />
+    <path d="M8 9h8M8 12h5" />
+  </Base>
+);
+
+export const CapIcon = (p: IconProps) => (
+  <Base {...p}>
+    <path d="m12 4 10 5-10 5L2 9l10-5Z" />
+    <path d="M6 11.500V16c0 1.200 2.700 3 6 3s6-1.800 6-3v-4.500" />
+    <path d="M22 9v5" />
+  </Base>
+);
+
 export const UsersIcon = (p: IconProps) => (
   <Base {...p}>
     <circle cx="9" cy="8" r="3.200" />

@@ -6,6 +6,7 @@ import DailyActions from "./sections/DailyActions";
 import TopicSection from "./sections/TopicSection";
 import Participe from "./sections/Participe";
 import About from "./sections/About";
+import Contact from "./sections/Contact";
 import References from "./sections/References";
 import { economiaDeAgua, hortaEmCasa, preservacaoAmbiental, sustentabilidade } from "./data/content";
 
@@ -29,6 +30,7 @@ export default function App() {
         <DailyActions />
         <Participe />
         <About />
+        <Contact />
         <References />
       </main>
       <Footer />

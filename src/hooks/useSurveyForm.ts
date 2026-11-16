@@ -1,16 +1,15 @@
 import { useCallback, useRef, useState, type FormEvent } from "react";
 import type { FieldName, FormErrors, SurveyFormState } from "../types/survey";
 import { toPayload, validateSurvey } from "../services/validation";
-import { NotConfiguredError, submitSurvey } from "../services/surveyService";
+import { submitSurvey } from "../services/surveyService";
 
 export type SubmitStatus =
   | { kind: "idle" }
   | { kind: "submitting" }
   | { kind: "success" }
-  | { kind: "error"; message: string; notConfigured: boolean };
+  | { kind: "error"; message: string };
 
 export const initialForm: SurveyFormState = {
-  name: "",
   hadGarden: "",
   learnedNew: "",
   mostInteresting: "",
@@ -25,7 +24,6 @@ export const initialForm: SurveyFormState = {
 
 /** Ordem dos campos na tela, usada para focar o primeiro erro. */
 const FIELD_ORDER: FieldName[] = [
-  "name",
   "hadGarden",
   "learnedNew",
   "mostInteresting",
@@ -89,20 +87,10 @@ export function useSurveyForm() {
       setStatus({ kind: "success" });
       setForm(initialForm);
     } catch (err) {
-      if (err instanceof NotConfiguredError) {
-        setStatus({
-          kind: "error",
-          notConfigured: true,
-          message:
-            "Sua resposta não foi enviada: o recebimento de respostas ainda não foi configurado neste site. Avise a equipe do projeto.",
-        });
-      } else {
-        setStatus({
-          kind: "error",
-          notConfigured: false,
-          message: err instanceof Error ? err.message : "Ocorreu um erro inesperado. Tente novamente.",
-        });
-      }
+      setStatus({
+        kind: "error",
+        message: err instanceof Error ? err.message : "Ocorreu um erro inesperado. Tente novamente.",
+      });
     }
   };
 
